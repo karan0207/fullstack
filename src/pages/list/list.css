@@ -81,3 +81,42 @@
 .listResult {
   flex: 3;
 }
+.filterbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ width: max-content;
+ margin: 0 auto;
+ background-color: #0071c2;
+ color: white;
+ padding: 5px 10px;
+ border-radius: 35px;
+ margin-top: 20px;
+ font-weight: bold;
+}
+/* .searchicon{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+} */
+@media screen and (max-width:660px){
+    /* .listContainer {
+    position: absolute;
+    top: 8vh;
+  }  */
+  .listWrapper {
+    display: flex;
+    flex-direction: column;
+   
+  } 
+   .listSearch {
+    flex: 1;
+    background-color: #febb02;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 100px;
+    height: 450px;
+  } 
+  
+}

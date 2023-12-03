@@ -28,3 +28,44 @@
   font-size: 14px;
   font-weight: 300;
 }
+.pListHead{
+  display: none;
+}
+
+@media screen and (max-width:500px) {
+  .pList{
+    width: 90%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+   
+  }
+  .pListItem{
+    flex:1;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid gray;
+  }
+  .pListTitles{
+    font-size: 18px;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+  .pListImg{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .pListHead{
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -113,7 +113,9 @@
   font-size: 12px;
   color: black;
 }
-
+.mobileslider {
+  display: none;
+}
 .optionCounterButton {
   width: 30px;
   height: 30px;
@@ -125,4 +127,82 @@
 
 .optionCounterButton:disabled {
   cursor: not-allowed;
+}
+.closeCalendar {
+  color: black;
+  display: none;
+}
+/* @media screen and (max-width: 660px) {
+  *{
+    /* overflow-x: hidden; */
+  /* }
+}  */
+
+@media screen and (max-width: 1200px) {
+  .header {
+    height: 90vh;
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  .headerList {
+    display: none;
+  }
+  .mobnone {
+    display: none;
+  }
+  .headerSearch {
+    height: 300px;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: #003580;
+    width: 90%;
+    margin-top: 100px;
+    border: none;
+  }
+  .headerSearchItem {
+    background-color: white;
+    color: #003580;
+    width: 90%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    font-size: 18px;
+  }
+  .headerSearchItem > input {
+    font-size: 18px;
+  }
+  .mobilebtn {
+    background-color: #003580;
+    padding: 5px 10px;
+  }
+  .headerBtn {
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+  .headerTitle {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+  .headerDesc {
+    font-size: 20px;
+  }
+  .closeCalendar{
+    display: block;
+    z-index: 11;
+  }
+  .options {
+    
+    border: 1px solid #003580;
+  }
+  .optionItem {
+    width: 250px;
+    
+   
+    
+  }
 }

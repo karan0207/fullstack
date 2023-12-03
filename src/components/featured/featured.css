@@ -27,3 +27,17 @@
   bottom: 20px;
   left: 20px;
 }
+
+@media screen and (max-width:500px) {
+  .featured{
+    width: 90%;
+    height: 800px;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1;
+  }
+
+}

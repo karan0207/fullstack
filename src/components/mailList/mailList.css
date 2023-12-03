@@ -8,6 +8,7 @@
   align-items: center;
   gap: 20px;
   padding: 50px;
+  margin-bottom: 20px;
 }
 
 .mailInputContainer>input{
@@ -27,4 +28,31 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width:500px) {
+  .mail{
+    padding: 100px;
+    justify-content: center;
+  }
+  .mailTitle{
+    margin: 0 10px;
+  }
+  .mailInputContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    flex-wrap: wrap;
+  }
+  .mailInputContainer>input{
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    margin:10px;
+  }
+  .mailInputContainer>button{
+    width: max-content;
+    padding: 5px 10px;
+    margin: 0 auto;
+  }
 }
