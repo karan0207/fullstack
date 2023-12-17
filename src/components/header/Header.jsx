@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
 import ClearIcon from '@mui/icons-material/Clear';
 // import { AuthContext } from "../../context/AuthContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Header = ({ type }) => {
@@ -54,10 +56,12 @@ const Header = ({ type }) => {
   const handleSearch = () => {
     dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
     navigate("/hotels", { state: { destination, dates, options } });
+    const notify =()=>toast("searched done");
   };
   
   return (
     <div className="header" id="header">
+    <ToastContainer/>
       <div
         className={
           type === "list" ? "headerContainer listMode" : "headerContainer"
@@ -92,9 +96,9 @@ const Header = ({ type }) => {
             </h1>
             <p className="headerDesc">
               Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Lamabooking account
+              more with a free HotelBooking account.
             </p>
-            <button className="headerBtn mobnone">Sign in / Register</button>
+            <button className="headerBtn mobnone dpnone">Sign in / Register</button>
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
@@ -215,6 +219,7 @@ const Header = ({ type }) => {
           </>
         )}
       </div>
+      
     </div>
   );
 };

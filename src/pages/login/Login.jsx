@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-// import { AuthContext } from "../../context/AuthContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./login.css";
 import Navbar from "../../components/navbar/Navbar";
 
@@ -33,7 +34,8 @@ const Login = () => {
         password,
       });
       const token = response.data.token;
-      alert("Login successful");
+      // alert("Login ");
+      toast("Login completed!")
       setUsername("");
       setPassword("");
       fetchUsers();
@@ -82,6 +84,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <ToastContainer type={'success'}/>
     </>
   );
 };

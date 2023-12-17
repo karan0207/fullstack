@@ -69,8 +69,8 @@ font-size: 20px;
     z-index: 5;
     width: 80%;
     
-    background-color: rgba(0, 0, 0, 0.959);
-
+    /* background-color: rgba(0, 0, 0, 0.959); */
+background-color: #164c98;
   }
   .icon{
     z-index: 6;
@@ -92,6 +92,10 @@ font-size: 20px;
   .item span{
     margin-left: 5px;
     color: white;
+  }
+  .item span:hover{
+    margin-left: 5px;
+    color: gray;
   }
   
   .dpnone{

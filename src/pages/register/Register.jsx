@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./register.css";
 import Navbar from "../../components/navbar/Navbar";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   // const [credentials, setCredentials] = useState({
@@ -56,6 +58,7 @@ const Register = () => {
       .post("auth/register", { username, email, password })
       .then(() => {
         alert("Registration successfull");
+        
         setUsername("");
         setEmail("");
         setPassword("");
@@ -67,11 +70,15 @@ const Register = () => {
       });
   };
 
+  // const notify = () => toast("Registration completed!");
+  
 
   return (
     <>
       <Navbar />
+      <ToastContainer/>
       <div className="login">
+      
         <div className="box">
           <div className="img">
             <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hotel" />
@@ -110,7 +117,9 @@ const Register = () => {
             </button>
             {/* {error && <span>{error.message}</span>} */}
           </form>
+          
         </div>
+       
       </div>
     </>
   );
